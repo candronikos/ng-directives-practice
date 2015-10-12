@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="nd_item_editor.js"></script>
+</head>
+<body>
+  <div ng-app="itemApp">
+    <h1>Items</h1>
+    <section ng-controller="ItemsCtrl as ctrl">
+      <ul>
+        <li ng-repeat="item in ctrl.items">
+          {{item.a}}, {{item.b}}
+        </li>
+      </ul>
+      <nd-item-editor-form items="ctrl.items">
+      </nd-item-editor-form>
+    </section>
+  </div>
+
+</body>
+</html>
